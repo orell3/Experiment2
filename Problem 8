@@ -1,0 +1,22 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int N, c;
+
+	cout << "Enter a number: "; cin >> N;
+	
+	c = 1;
+
+	while(c <= 10)
+	{
+		cout << c << " * " << N << " = " << c * N << endl;
+		c++;
+	}
+
+	_getch();
+	return 0;
+}
