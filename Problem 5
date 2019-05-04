@@ -1,0 +1,37 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main ()
+{
+	int counter;
+
+	counter = 1;
+	
+	while (counter <= 30)
+	{
+
+		if (counter < 10)
+		{
+			cout << counter << ",";
+			counter++;
+		}
+
+		if (counter < 30 && counter >= 10)
+		{
+			cout << counter << ",";
+			counter = counter + 2;
+		}
+
+		if (counter == 30)
+		{
+			cout << counter;
+			break;
+		}
+	}
+
+
+	_getch();
+	return 0;
+}
