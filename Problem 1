@@ -1,0 +1,59 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int BILL, H;
+	char package;
+
+	cout << "Enter the package: "; cin >> package;
+	cout << "Enter number of hours: "; cin >> H;
+	
+	switch(package)
+	{
+		case 'a':
+		case 'A':
+			if(H > 10)
+			{
+				BILL = 995 + (H - 10) * 20;
+				cout << endl;
+				cout << "Total internet bill = P" << BILL;
+			}
+			else 
+			{ 
+				BILL = 995; 
+				cout << endl;
+				cout << "Total internet bill = P" << BILL;
+			}
+			break;
+		case 'b':
+		case 'B':
+			if(H > 20)
+			{
+				BILL = 1495 + (H - 20 ) * 10;
+				cout << "Total internet bill = P" << BILL;
+			} 	
+			else 
+			{ 
+				BILL = 1495; 
+				cout << endl;
+				cout << "Total internet bill = P" << BILL;
+			}
+			break;
+		case 'c':
+		case 'C':
+			BILL = 1995;
+			cout << endl;
+			cout << "Total internet bill = P" << BILL;
+			break;
+
+		default:
+			cout << endl;
+			cout << "Invalid input! The choices are package A, B, and C only." << endl;
+	}
+	
+	_getch();
+	return 0;
+}
