@@ -1,0 +1,30 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main ()
+{
+	
+	int gallon1, gallon2, consumed;
+	float bill, unpaidbill;
+	
+	cout << "Enter the current meter reading: "; cin >> gallon1;
+	cout << "Enter the previous meter reading: "; cin >> gallon2;
+	cout << "Enter the unpaid balance (if any): P"; cin >> unpaidbill;
+	
+	consumed = gallon1 - gallon2;
+
+	bill = 35 + (consumed * 1.1);
+	
+	if (unpaidbill > 0)
+	{
+		bill = bill + 20;
+	}
+
+	
+	cout << "Total water bill = P" << bill;
+	
+	_getch();
+	return 0;
+}
